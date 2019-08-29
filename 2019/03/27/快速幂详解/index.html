@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="Howie">
+  <meta name="keywords" content="C/C++,算法,">
 
 
 
@@ -86,17 +86,18 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="description" content="快速幂这个东西比较好理解，但实现起来总会忘记一些细节，今天把它总结一下防止忘记。">
+<meta name="keywords" content="C&#x2F;C++,算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://huangyanblog.com/2019/08/29/hello-world/index.html">
+<meta property="og:title" content="快速幂详解">
+<meta property="og:url" content="https://huangyanblog.com/2019/03/27/快速幂详解/index.html">
 <meta property="og:site_name" content="HuangYan&#39;s blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="快速幂这个东西比较好理解，但实现起来总会忘记一些细节，今天把它总结一下防止忘记。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-29T08:37:07.096Z">
+<meta property="og:updated_time" content="2019-04-03T09:29:31.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="快速幂详解">
+<meta name="twitter:description" content="快速幂这个东西比较好理解，但实现起来总会忘记一些细节，今天把它总结一下防止忘记。">
 
 
 
@@ -126,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="https://huangyanblog.com/2019/08/29/hello-world/">
+  <link rel="canonical" href="https://huangyanblog.com/2019/03/27/快速幂详解/">
 
 
 
 
 
-  <title>Hello World | HuangYan's blog</title>
+  <title>快速幂详解 | HuangYan's blog</title>
   
 
 
@@ -291,7 +292,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://huangyanblog.com/2019/08/29/hello-world/">
+    <link itemprop="mainEntityOfPage" href="https://huangyanblog.com/2019/03/27/快速幂详解/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Huang Yan">
@@ -308,7 +309,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World</h1>
+          <h1 class="post-title" itemprop="name headline">快速幂详解</h1>
         
 
         <div class="post-meta">
@@ -320,8 +321,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-29T16:37:07+08:00">
-                2019-08-29
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-27T15:51:05+08:00">
+                2019-03-27
               </time>
             
 
@@ -331,6 +332,28 @@
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/算法详解/" itemprop="url" rel="index">
+                    <span itemprop="name">算法详解</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -339,8 +362,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/08/29/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/08/29/hello-world/" itemprop="commentCount"></span>
+                <a href="/2019/03/27/快速幂详解/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/27/快速幂详解/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -348,7 +371,7 @@
 
           
           
-             <span id="/2019/08/29/hello-world/" class="leancloud_visitors" data-flag-title="Hello World">
+             <span id="/2019/03/27/快速幂详解/" class="leancloud_visitors" data-flag-title="快速幂详解">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -410,19 +433,42 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+        <p>快速幂这个东西比较好理解，但实现起来总会忘记一些细节，今天把它总结一下防止忘记。</p>
+<a id="more"></a>
+<hr>
+<h2 id="题目："><a href="#题目：" class="headerlink" title="题目："></a><a href="#题目：" title="题目："></a>题目：</h2><p>原题链接：<a href="https://www.acwing.com/problem/content/91/" target="_blank" rel="noopener">点击此处</a></p>
+<h4 id="a-b"><a href="#a-b" class="headerlink" title="a^b"></a><a href="#a-b" title="a^b"></a>a^b</h4><p>求 a 的 b 次方对 p 取模的值。</p>
+<h6 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a><a href="#输入格式" title="输入格式"></a>输入格式</h6><p>三个整数 a,b,p ,在同一行用空格隔开。</p>
+<h6 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a><a href="#输出格式" title="输出格式"></a>输出格式</h6><p>输出一个整数，表示<code>a^b mod p</code>的值。</p>
+<h6 id="数据范围"><a href="#数据范围" class="headerlink" title="数据范围"></a><a href="#数据范围" title="数据范围"></a>数据范围</h6><p>$ 1\leq a,b,p\leq 10^9 $</p>
+<h6 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a><a href="#输入样例：" title="输入样例："></a>输入样例：</h6><p>1</p>
+<p>3 2 7</p>
+<h6 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a><a href="#输出样例：" title="输出样例："></a>输出样例：</h6><p>1</p>
+<p>2</p>
+<hr>
+<h2 id="原理："><a href="#原理：" class="headerlink" title="原理："></a><a href="#原理：" title="原理："></a>原理：</h2><p>快速幂的目的就是为了做到快速求幂，假设在不使用快速幂的情况下解这道题，那么就是把 <strong>a</strong> 连续乘 <strong>b</strong> 次，这样的时间复杂度是 $O(b)$ 也就是 $O(n)$ 级别的。虽然这样看起来也很快了，但是题目的数据范围最大为 $1e9$ ，这样子的速度完全是不够的。但是使用快速幂的算法解决的话，他的复杂度将会下降到 $O(logn)$，如果 <em>n</em> 很大，速度差就是天壤之别了。快速幂的原理如下：</p>
+<p>假设我们求 $a^{11}$ ，那么 <em>11</em> 是可以拆分成二进制形式 <em>1011</em> ，该数字的二进制的第 <em>i</em> 位的权值为 $2^{i-1}$，所以 $a^{11}=a^{2^0+2^1+2^3}$。我们可以将他再转化一下变成 a^{2^0}*a^{2^1}*a^{2^3}=a^1*a^2*a^8。可以看出通过这样的转化，原本需要乘 <em>11</em> 次的运算可以减少到 <em>3</em> 次。但是要怎么操作才能转化成这三项呢，下面给出详细解释。</p>
+<p>由于上面的式子是在二进制数的基础上转化来的，我们很容易就能想到用 <strong>位运算</strong> 会简化我们的操作。这里我们来介绍一下位运算中的 <code>&amp;</code> 和 <code>&gt;&gt;</code> 。<br>&amp;运算的<strong>运算规则</strong>是<code>0&amp;0 = 0; 0&amp;1 = 0; 1&amp;0 = 0; 1&amp;1 = 1;</code>即有0则为0，他通常用于二进制的取位操作，例如一个数 <code>x &amp; 1</code> 就是取二进制的末位，因为 1 的二进制表示为 00000001，假设 x 的二进制表示为 10010001，那么他们二进制的每一位都将按照<strong>运算规则</strong>运算，由于1的二进制表示除了末位其他都为0，那么 <code>x &amp; 1</code> 的值除了末位其他位也都是0，由于x的末位是1，所以答案为00000001则为1。<br>&gt;&gt;运算就是将二进制去掉最后一位，高位补零，例如<code>8 &gt;&gt; 1</code>。8的二进制表示为1000，去掉最低位，高位补零后为0100，所以答案是4。由于&gt;&gt;运算比较简单，这里不再多说。</p>
+<p>知道如何通过二进制转化式子后，我们就可以写出快速幂的模板。先不多说，上了代码再解释。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">qmi</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b, <span class="keyword">int</span> p)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> ans = <span class="number">1</span>, t = a;</span><br><span class="line">    <span class="keyword">while</span> (b) &#123;</span><br><span class="line">        <span class="keyword">if</span> (b &amp; <span class="number">1</span>) res = res * <span class="number">1l</span>l * t % p;</span><br><span class="line">        t = t * <span class="number">1l</span>l * t % p;</span><br><span class="line">        b &gt;&gt;= <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>这里要注意，题目只要求取模后的值，所以最终答案要取模。而这里每一步都取模的原理是 <code>(a * b) % p = (a % p * b % p) % p</code>，这么做是为了防止数据太大而溢出。<code>ans * 1ll</code>也是为了防止溢出。<code>1ll</code>是<code>long long</code>类型，所以会暂时以<code>long long</code>的类型来运算。<br>代码很短，如果记不住原理的，死记也可以，这里还可以将快速幂写成自定义函数，方便重复使用。<br>所以这道题使用上面那套模板就能轻松AC。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">qmi</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b, <span class="keyword">int</span> p)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> ans = <span class="number">1</span>, t = a;</span><br><span class="line">    <span class="keyword">while</span> (b) &#123;</span><br><span class="line">        <span class="keyword">if</span> (b &amp; <span class="number">1</span>) ans = ans * <span class="number">1l</span>l * t % p;</span><br><span class="line">        t = t * <span class="number">1l</span>l * t % p;</span><br><span class="line">        b &gt;&gt;= <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans % p;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a, b, p;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; a &gt;&gt; b &gt;&gt; p;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; qmi(a, b, p) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="练习"><a href="#练习" class="headerlink" title="练习"></a><a href="#练习" title="练习"></a>练习</h2><p>下面给出另外一道题目，与上一题的做法类似，大家检测一下自己是否学会了快速幂的使用。</p>
+<p>原题链接：<a href="https://www.acwing.com/problem/content/description/92/" target="_blank" rel="noopener">点击此处</a></p>
+<h4 id="64位整数乘法"><a href="#64位整数乘法" class="headerlink" title="64位整数乘法"></a><a href="#64位整数乘法" title="64位整数乘法"></a>64位整数乘法</h4><p>求 a 乘 b 对 p 取模的值。</p>
+<h6 id="输入格式-1"><a href="#输入格式-1" class="headerlink" title="输入格式"></a><a href="#输入格式-1" title="输入格式"></a>输入格式</h6><p>第一行输入整数a，第二行输入整数b，第三行输入整数p。</p>
+<h6 id="输出格式-1"><a href="#输出格式-1" class="headerlink" title="输出格式"></a><a href="#输出格式-1" title="输出格式"></a>输出格式</h6><p>输出一个整数，表示a*b mod p的值。</p>
+<h6 id="数据范围-1"><a href="#数据范围-1" class="headerlink" title="数据范围"></a><a href="#数据范围-1" title="数据范围"></a>数据范围</h6><p>$1\leq a,b,p\leq 10^{18}$</p>
+<h6 id="输入样例：-1"><a href="#输入样例：-1" class="headerlink" title="输入样例："></a><a href="#输入样例：-1" title="输入样例："></a>输入样例：</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h6 id="输出样例：-1"><a href="#输出样例：-1" class="headerlink" title="输出样例："></a><a href="#输出样例：-1" title="输出样例："></a>输出样例：</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<h4 id="解法："><a href="#解法：" class="headerlink" title="解法："></a><a href="#解法：" title="解法："></a>解法：</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">unsigned</span> <span class="keyword">long</span> <span class="keyword">long</span> a, b, p;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; a &gt;&gt; b &gt;&gt; p;</span><br><span class="line">    <span class="keyword">unsigned</span> <span class="keyword">long</span> <span class="keyword">long</span> ans = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (b) &#123;</span><br><span class="line">        <span class="keyword">if</span> (b &amp; <span class="number">1</span>)</span><br><span class="line">            ans = ans + a % p;</span><br><span class="line">        a = a * <span class="number">1l</span>l * <span class="number">2</span> % p;</span><br><span class="line">        b &gt;&gt;= <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; ans % p &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
 
       
     </div>
@@ -451,7 +497,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://huangyanblog.com/2019/08/29/hello-world/" title="Hello World">https://huangyanblog.com/2019/08/29/hello-world/</a>
+    <a href="https://huangyanblog.com/2019/03/27/快速幂详解/" title="快速幂详解">https://huangyanblog.com/2019/03/27/快速幂详解/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -464,6 +510,14 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/C-C/" rel="tag"># C/C++</a>
+          
+            <a href="/tags/算法/" rel="tag"># 算法</a>
+          
+        </div>
+      
 
       
       
@@ -473,8 +527,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/27/ST算法详解/" rel="next" title="ST算法详解">
-                <i class="fa fa-chevron-left"></i> ST算法详解
+              <a href="/2019/03/27/快速排序详解/" rel="next" title="快速排序详解">
+                <i class="fa fa-chevron-left"></i> 快速排序详解
               </a>
             
           </div>
@@ -482,6 +536,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/03/27/ST算法详解/" rel="prev" title="ST算法详解">
+                ST算法详解 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -634,7 +692,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目："><span class="nav-number">1.</span> <span class="nav-text">题目：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#a-b"><span class="nav-number">1.0.1.</span> <span class="nav-text">a^b</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#输入格式"><span class="nav-number">1.0.1.0.1.</span> <span class="nav-text">输入格式</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#输出格式"><span class="nav-number">1.0.1.0.2.</span> <span class="nav-text">输出格式</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#数据范围"><span class="nav-number">1.0.1.0.3.</span> <span class="nav-text">数据范围</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#输入样例："><span class="nav-number">1.0.1.0.4.</span> <span class="nav-text">输入样例：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#输出样例："><span class="nav-number">1.0.1.0.5.</span> <span class="nav-text">输出样例：</span></a></li></ol></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#原理："><span class="nav-number">2.</span> <span class="nav-text">原理：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#练习"><span class="nav-number">3.</span> <span class="nav-text">练习</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#64位整数乘法"><span class="nav-number">3.0.1.</span> <span class="nav-text">64位整数乘法</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#输入格式-1"><span class="nav-number">3.0.1.0.1.</span> <span class="nav-text">输入格式</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#输出格式-1"><span class="nav-number">3.0.1.0.2.</span> <span class="nav-text">输出格式</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#数据范围-1"><span class="nav-number">3.0.1.0.3.</span> <span class="nav-text">数据范围</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#输入样例：-1"><span class="nav-number">3.0.1.0.4.</span> <span class="nav-text">输入样例：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#输出样例：-1"><span class="nav-number">3.0.1.0.5.</span> <span class="nav-text">输出样例：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解法："><span class="nav-number">3.0.2.</span> <span class="nav-text">解法：</span></a></li></div>
             
 
           </div>
@@ -1305,6 +1363,26 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 

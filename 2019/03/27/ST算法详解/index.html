@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="Howie">
+  <meta name="keywords" content="C/C++,算法,">
 
 
 
@@ -86,17 +86,18 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="description" content="在RMQ（区间最值问题）中，著名的ST算法可以很好的求得答案。但却不能维护最值，也就是说，过程中不能改变区间中的某个元素的值。对于需要大量询问的场景是非常适用的。接下来我们就来详细了解下 ST 算法的处理过程。">
+<meta name="keywords" content="C&#x2F;C++,算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://huangyanblog.com/2019/08/29/hello-world/index.html">
+<meta property="og:title" content="ST算法详解">
+<meta property="og:url" content="https://huangyanblog.com/2019/03/27/ST算法详解/index.html">
 <meta property="og:site_name" content="HuangYan&#39;s blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="在RMQ（区间最值问题）中，著名的ST算法可以很好的求得答案。但却不能维护最值，也就是说，过程中不能改变区间中的某个元素的值。对于需要大量询问的场景是非常适用的。接下来我们就来详细了解下 ST 算法的处理过程。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-29T08:37:07.096Z">
+<meta property="og:updated_time" content="2019-04-03T09:29:31.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="ST算法详解">
+<meta name="twitter:description" content="在RMQ（区间最值问题）中，著名的ST算法可以很好的求得答案。但却不能维护最值，也就是说，过程中不能改变区间中的某个元素的值。对于需要大量询问的场景是非常适用的。接下来我们就来详细了解下 ST 算法的处理过程。">
 
 
 
@@ -126,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="https://huangyanblog.com/2019/08/29/hello-world/">
+  <link rel="canonical" href="https://huangyanblog.com/2019/03/27/ST算法详解/">
 
 
 
 
 
-  <title>Hello World | HuangYan's blog</title>
+  <title>ST算法详解 | HuangYan's blog</title>
   
 
 
@@ -291,7 +292,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://huangyanblog.com/2019/08/29/hello-world/">
+    <link itemprop="mainEntityOfPage" href="https://huangyanblog.com/2019/03/27/ST算法详解/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Huang Yan">
@@ -308,7 +309,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World</h1>
+          <h1 class="post-title" itemprop="name headline">ST算法详解</h1>
         
 
         <div class="post-meta">
@@ -320,8 +321,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-29T16:37:07+08:00">
-                2019-08-29
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-27T15:53:08+08:00">
+                2019-03-27
               </time>
             
 
@@ -331,6 +332,28 @@
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/算法详解/" itemprop="url" rel="index">
+                    <span itemprop="name">算法详解</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -339,8 +362,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/08/29/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/08/29/hello-world/" itemprop="commentCount"></span>
+                <a href="/2019/03/27/ST算法详解/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/27/ST算法详解/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -348,7 +371,7 @@
 
           
           
-             <span id="/2019/08/29/hello-world/" class="leancloud_visitors" data-flag-title="Hello World">
+             <span id="/2019/03/27/ST算法详解/" class="leancloud_visitors" data-flag-title="ST算法详解">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -410,19 +433,38 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+        <p>在RMQ（区间最值问题）中，著名的ST算法可以很好的求得答案。但却不能维护最值，也就是说，过程中不能改变区间中的某个元素的值。对于需要大量询问的场景是非常适用的。接下来我们就来详细了解下 ST 算法的处理过程。</p>
+<a id="more"></a>
+<hr>
+<h2 id="解析"><a href="#解析" class="headerlink" title="解析"></a><a href="#解析" title="解析"></a>解析</h2><p>假如给出下面长度为10的数组：<br><code>1 3 2 4 9 5 6 7 8 0</code><br>让我们求得 [3, 7] 之间的最大值，如果采取暴力的查找方式，复杂度为$ O(n) $，尽管看起来还可以，但当要求连续查询区间最大值时，时间就有点吃不消了。而ST算法的每次查询只需要$ O(1) $的复杂度。因为他预处理了一个DP数组，复杂度为 $ O(n\log n) $。</p>
+<p>我们用 <code>dp[i][j]</code> 表示从 <em>i</em> 开始的 $2^j$ 个数的最值，表示 <code>dp[i][j]</code> “管辖” <em>index = i</em> 开始的 $2^j$ 个数字，那么很显然，任何一段区间都能被两个 <strong>dp</strong> 元素管辖到。比如上面说的 [3, 7]，就能被<code>dp[3][2]</code> (3 4 5 6) 和 <code>dp[4][2]</code> (4 5 6 7)管辖到，而 <code>max(dp[3][2], dp[4][2])</code>也就是[3, 7] 的最值了。</p>
+<p>这样我们只需预处理一个 <strong>dp</strong> 数组就可以了，而这个预处理是一个动态规划的过程，转移方程为：<br><code>dp[i][j] = max(dp[i][j - 1], dp[ i + (1&lt;&lt;(j-1)) ][j - 1]);</code></p>
+<p>下面给出ST算法的预处理代码：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">ST_prework</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1'</span> i &lt;= n; i++)</span><br><span class="line">        f[i][<span class="number">0</span>] = a[i];</span><br><span class="line">    <span class="keyword">int</span> t = <span class="built_in">log</span>(n) / <span class="built_in">log</span>(<span class="number">2</span>) + <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; t; j++)</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n - (<span class="number">1</span>&lt;&lt;j) + <span class="number">1</span>; i++)</span><br><span class="line">            f[i][j] = max(f[i][j<span class="number">-1</span>], f[i + (<span class="number">1</span>&lt;&lt;(j<span class="number">-1</span>))][j<span class="number">-1</span>]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>而 <strong>dp</strong> 数组的预处理和 <strong>RMQ</strong> 的求解过程正好是个逆过程。当讯问任意区间 [l, r] 的最值时， 我们先计算出一个 <em>k</em>，满足 $ 2^k &lt; r - l + 1 \leq 2^{k+1} $，也就是使2的 <em>k</em> 次幂小于区间长度的前提下最大的 <em>k</em>。那么从“ <em>l</em> 开始的 $2^k$ 个数”和以“ <em>r</em> 结尾的 $ 2^k $ 个数” 这两段一定覆盖了整个区间[l, r]，我们可以用<code>f[l][k]</code>和<code>f[r - (1&lt;&lt;k) + 1][k]</code>表示，两者中较大的那个就是整个区间 [l, r] 的最大值。<br>查询代码如下：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">ST_query</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> k = <span class="built_in">log</span>(r - l + <span class="number">1</span>) / <span class="built_in">log</span>(<span class="number">2</span>);</span><br><span class="line">    <span class="keyword">return</span> max(f[l][k], f[r - (<span class="number">1</span>&lt;&lt;k) + <span class="number">1</span>][k]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<hr>
+<ul>
+<li><h2 id="实战"><a href="#实战" class="headerlink" title="实战"></a><a href="#实战" title="实战"></a>实战</h2></li>
+</ul>
+<p>这里我们用 <strong>POJ</strong> 上的一道ST算法模板题<a href="http://poj.org/problem?id=3264" target="_blank" rel="noopener">Balanced Lineup</a>来练习。</p>
+<h3 id="Balanced-Lineup"><a href="#Balanced-Lineup" class="headerlink" title="Balanced Lineup"></a><a href="#Balanced-Lineup" title="Balanced Lineup"></a>Balanced Lineup</h3><p>Time Limit: 5000MS        Memory Limit: 65536K<br>Total Submissions: 67305        Accepted: 31260<br>Case Time Limit: 2000MS</p>
+<h4 id="Description"><a href="#Description" class="headerlink" title="Description"></a><a href="#Description" title="Description"></a>Description</h4><p>For the daily milking, Farmer John’s N cows (1 ≤ N ≤ 50,000) always line up in the same order. One day Farmer John decides to organize a game of Ultimate Frisbee with some of the cows. To keep things simple, he will take a contiguous range of cows from the milking lineup to play the game. However, for all the cows to have fun they should not differ too much in height.</p>
+<p>Farmer John has made a list of Q (1 ≤ Q ≤ 200,000) potential groups of cows and their heights (1 ≤ height ≤ 1,000,000). For each group, he wants your help to determine the difference in height between the shortest and the tallest cow in the group.</p>
+<h4 id="Input"><a href="#Input" class="headerlink" title="Input"></a><a href="#Input" title="Input"></a>Input</h4><p>Line 1: Two space-separated integers, N and Q.<br>Lines 2..N+1: Line i+1 contains a single integer that is the height of cow i<br>Lines N+2..N+Q+1: Two integers A and B (1 ≤ A ≤ B ≤ N), representing the range of cows from A to B inclusive.</p>
+<h4 id="Output"><a href="#Output" class="headerlink" title="Output"></a><a href="#Output" title="Output"></a>Output</h4><p>Lines 1..Q: Each line contains a single integer that is a response to a reply and indicates the difference in height between the tallest and shortest cow in the range.</p>
+<h4 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a><a href="#Sample-Input" title="Sample Input"></a>Sample Input</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">6 3</span><br><span class="line">1</span><br><span class="line">7</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">2</span><br><span class="line">5</span><br><span class="line">1 5</span><br><span class="line">4 6</span><br><span class="line">2 2</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h4 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a><a href="#Sample-Output" title="Sample Output"></a>Sample Output</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">6</span><br><span class="line">3</span><br><span class="line">0</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<hr>
+<h3 id="题意："><a href="#题意：" class="headerlink" title="题意："></a><a href="#题意：" title="题意："></a>题意：</h3><p>给你 <em>n</em> 个数字，<em>p</em> 次询问每次询问给出 <em>l</em> 和 <em>r</em> ，输出数字区间[l, r]中最大值与最小值的差。</p>
+<h3 id="思路："><a href="#思路：" class="headerlink" title="思路："></a><a href="#思路：" title="思路："></a>思路：</h3><p>模板题，需要注意的就是输入数据有很多需要使用 <code>scanf</code>， 否则会TLE。还有就是使用<strong>log</strong>函数时需要传递参数类型为<strong>double</strong>，所以需要转换一下类型。</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a><a href="#代码" title="代码"></a>代码</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">50005</span>;</span><br><span class="line"><span class="keyword">int</span> f1[N][<span class="number">32</span>], f2[N][<span class="number">32</span>], a[N];</span><br><span class="line"><span class="keyword">double</span> n;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">st</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">        f1[i][<span class="number">0</span>] = a[i];</span><br><span class="line">        f2[i][<span class="number">0</span>] = a[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> t = <span class="built_in">log</span>(n) / <span class="built_in">log</span>(<span class="number">2.0</span>) + <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; t; j++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n - (<span class="number">1</span> &lt;&lt; j) + <span class="number">1</span>; i++) &#123;</span><br><span class="line">            f1[i][j] = max(f1[i][j - <span class="number">1</span>], f1[i + (<span class="number">1</span> &lt;&lt; (j - <span class="number">1</span>))][j - <span class="number">1</span>]);</span><br><span class="line">            f2[i][j] = min(f2[i][j - <span class="number">1</span>], f2[i + (<span class="number">1</span> &lt;&lt; (j - <span class="number">1</span>))][j - <span class="number">1</span>]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">query1</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> k = <span class="built_in">log</span>(r - l + <span class="number">1.0</span>) / <span class="built_in">log</span>(<span class="number">2.0</span>);</span><br><span class="line">    <span class="keyword">return</span> max(f1[l][k], f1[r - (<span class="number">1</span> &lt;&lt; k) + <span class="number">1</span>][k]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">query2</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> k = <span class="built_in">log</span>(r - l + <span class="number">1.0</span>) / <span class="built_in">log</span>(<span class="number">2.0</span>);</span><br><span class="line">    <span class="keyword">return</span> min(f2[l][k], f2[r - (<span class="number">1</span> &lt;&lt; k) + <span class="number">1</span>][k]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> q;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;n, &amp;q);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;a[i]);</span><br><span class="line">    st();</span><br><span class="line">    <span class="keyword">int</span> l, r;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; q; i++) &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;l, &amp;r);</span><br><span class="line">        <span class="keyword">int</span> ans1 = query1(l, r);</span><br><span class="line">        <span class="keyword">int</span> ans2 = query2(l, r);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, ans1 - ans2);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
 
       
     </div>
@@ -451,7 +493,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://huangyanblog.com/2019/08/29/hello-world/" title="Hello World">https://huangyanblog.com/2019/08/29/hello-world/</a>
+    <a href="https://huangyanblog.com/2019/03/27/ST算法详解/" title="ST算法详解">https://huangyanblog.com/2019/03/27/ST算法详解/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -464,6 +506,14 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/C-C/" rel="tag"># C/C++</a>
+          
+            <a href="/tags/算法/" rel="tag"># 算法</a>
+          
+        </div>
+      
 
       
       
@@ -473,8 +523,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/27/ST算法详解/" rel="next" title="ST算法详解">
-                <i class="fa fa-chevron-left"></i> ST算法详解
+              <a href="/2019/03/27/快速幂详解/" rel="next" title="快速幂详解">
+                <i class="fa fa-chevron-left"></i> 快速幂详解
               </a>
             
           </div>
@@ -482,6 +532,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/08/29/hello-world/" rel="prev" title="Hello World">
+                Hello World <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -634,7 +688,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#解析"><span class="nav-number">1.</span> <span class="nav-text">解析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实战"><span class="nav-number">2.</span> <span class="nav-text">实战</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Balanced-Lineup"><span class="nav-number">2.1.</span> <span class="nav-text">Balanced Lineup</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Description"><span class="nav-number">2.1.1.</span> <span class="nav-text">Description</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Input"><span class="nav-number">2.1.2.</span> <span class="nav-text">Input</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Output"><span class="nav-number">2.1.3.</span> <span class="nav-text">Output</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Sample-Input"><span class="nav-number">2.1.4.</span> <span class="nav-text">Sample Input</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Sample-Output"><span class="nav-number">2.1.5.</span> <span class="nav-text">Sample Output</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题意："><span class="nav-number">2.2.</span> <span class="nav-text">题意：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#思路："><span class="nav-number">2.3.</span> <span class="nav-text">思路：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码"><span class="nav-number">2.4.</span> <span class="nav-text">代码</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1305,6 +1359,26 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 

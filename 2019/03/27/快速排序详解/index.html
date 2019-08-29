@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="Howie">
+  <meta name="keywords" content="C/C++,算法,">
 
 
 
@@ -86,17 +86,18 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="description" content="在编程中，排序是非常一个实用的算法。通常我们用来将一组数据升序或降序排列。但是排序也有不同的方法，他们的平均排序效率也不同。对于排序的数据较大时，我们通常使用快速排序(Quick Sort)。因为他的效率就与他的名字一样非常快，其平均复杂度为 O(nlogn)。下面我们来看看他的使用方法。">
+<meta name="keywords" content="C&#x2F;C++,算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://huangyanblog.com/2019/08/29/hello-world/index.html">
+<meta property="og:title" content="快速排序详解">
+<meta property="og:url" content="https://huangyanblog.com/2019/03/27/快速排序详解/index.html">
 <meta property="og:site_name" content="HuangYan&#39;s blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="在编程中，排序是非常一个实用的算法。通常我们用来将一组数据升序或降序排列。但是排序也有不同的方法，他们的平均排序效率也不同。对于排序的数据较大时，我们通常使用快速排序(Quick Sort)。因为他的效率就与他的名字一样非常快，其平均复杂度为 O(nlogn)。下面我们来看看他的使用方法。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-29T08:37:07.096Z">
+<meta property="og:updated_time" content="2019-04-03T09:29:31.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="快速排序详解">
+<meta name="twitter:description" content="在编程中，排序是非常一个实用的算法。通常我们用来将一组数据升序或降序排列。但是排序也有不同的方法，他们的平均排序效率也不同。对于排序的数据较大时，我们通常使用快速排序(Quick Sort)。因为他的效率就与他的名字一样非常快，其平均复杂度为 O(nlogn)。下面我们来看看他的使用方法。">
 
 
 
@@ -126,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="https://huangyanblog.com/2019/08/29/hello-world/">
+  <link rel="canonical" href="https://huangyanblog.com/2019/03/27/快速排序详解/">
 
 
 
 
 
-  <title>Hello World | HuangYan's blog</title>
+  <title>快速排序详解 | HuangYan's blog</title>
   
 
 
@@ -291,7 +292,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://huangyanblog.com/2019/08/29/hello-world/">
+    <link itemprop="mainEntityOfPage" href="https://huangyanblog.com/2019/03/27/快速排序详解/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Huang Yan">
@@ -308,7 +309,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World</h1>
+          <h1 class="post-title" itemprop="name headline">快速排序详解</h1>
         
 
         <div class="post-meta">
@@ -320,8 +321,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-29T16:37:07+08:00">
-                2019-08-29
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-27T15:47:36+08:00">
+                2019-03-27
               </time>
             
 
@@ -331,6 +332,28 @@
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/算法详解/" itemprop="url" rel="index">
+                    <span itemprop="name">算法详解</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -339,8 +362,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/08/29/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/08/29/hello-world/" itemprop="commentCount"></span>
+                <a href="/2019/03/27/快速排序详解/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/27/快速排序详解/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -348,7 +371,7 @@
 
           
           
-             <span id="/2019/08/29/hello-world/" class="leancloud_visitors" data-flag-title="Hello World">
+             <span id="/2019/03/27/快速排序详解/" class="leancloud_visitors" data-flag-title="快速排序详解">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -410,19 +433,86 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+        <p>在编程中，排序是非常一个实用的算法。通常我们用来将一组数据升序或降序排列。但是排序也有不同的方法，他们的平均排序效率也不同。对于排序的数据较大时，我们通常使用<em>快速排序(Quick Sort)</em>。因为他的效率就与他的名字一样非常快，其平均复杂度为 <strong><em>O(nlogn)</em></strong>。下面我们来看看他的使用方法。</p>
+<a id="more"></a>
+<hr>
+<ul>
+<li><h3 id="Part-1"><a href="#Part-1" class="headerlink" title="Part 1"></a><a href="#Part-1" title="Part 1"></a><em>Part 1</em></h3></li>
+</ul>
+<p>先写下快速排序的函数框架。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">quicksort</span><span class="params">(<span class="keyword">int</span> *arr, <span class="keyword">int</span> left, <span class="keyword">int</span> right)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;<span class="comment">//end quicksort</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>先创建一个<code>void</code>类型的函数, 函数中需要3个参数</p>
+<ul>
+<li><em>arr</em> 表示数组名</li>
+<li><em>left</em> 表示左边界</li>
+<li><em>right</em> 表示右边界</li>
+</ul>
+<hr>
+<ul>
+<li><h3 id="Part-2"><a href="#Part-2" class="headerlink" title="Part 2"></a><a href="#Part-2" title="Part 2"></a><em>Part 2</em></h3></li>
+</ul>
+<p>创建变量。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">quicksort</span><span class="params">(<span class="keyword">int</span> *arr, <span class="keyword">int</span> left, <span class="keyword">int</span> right)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = left;</span><br><span class="line">    <span class="keyword">int</span> j = right;</span><br><span class="line">    <span class="keyword">int</span> temp;</span><br><span class="line">    <span class="keyword">int</span> pivot = arr[(left + right) / <span class="number">2</span>];</span><br><span class="line">&#125;<span class="comment">//end quicksort</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>这些变量将会被用来遍历数组和交换数值。一共需要四个变量：</p>
+<ul>
+<li><em>i</em> 表示遍历的左边界</li>
+<li><em>j</em> 表示遍历的右边界</li>
+<li><em>temp</em> 用于后面的交换2个元素</li>
+<li><em>pivot</em> 作为中间点和其他元素比较，方便排序</li>
+</ul>
+<hr>
+<ul>
+<li><h3 id="Part-3"><a href="#Part-3" class="headerlink" title="Part 3"></a><a href="#Part-3" title="Part 3"></a><em>Part 3</em></h3></li>
+</ul>
+<p>写个<code>while</code>循环开始排序</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">quicksort</span><span class="params">(<span class="keyword">int</span> *arr, <span class="keyword">int</span> left, <span class="keyword">int</span> right)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = left;</span><br><span class="line">    <span class="keyword">int</span> j = right;</span><br><span class="line">    <span class="keyword">int</span> temp;</span><br><span class="line">    <span class="keyword">int</span> pivot = arr[(left + right) / <span class="number">2</span>];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (i &lt;= j) &#123;</span><br><span class="line"></span><br><span class="line">    &#125;<span class="comment">//end while</span></span><br><span class="line"></span><br><span class="line">&#125;<span class="comment">//end quicksort</span></span><br><span class="line"></span><br><span class="line">&#125;<span class="comment">//end quicksort</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>当 <em>i &lt;= j</em> 时才遍历数组。</p>
+<hr>
+<ul>
+<li><h3 id="Part-4"><a href="#Part-4" class="headerlink" title="Part 4"></a><a href="#Part-4" title="Part 4"></a><em>Part 4</em></h3></li>
+</ul>
+<p>开始遍历两侧元素。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">quicksort</span><span class="params">(<span class="keyword">int</span> *arr, <span class="keyword">int</span> left, <span class="keyword">int</span> right)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = left;</span><br><span class="line">    <span class="keyword">int</span> j = right;</span><br><span class="line">    <span class="keyword">int</span> temp;</span><br><span class="line">    <span class="keyword">int</span> pivot = arr[(left + right) / <span class="number">2</span>];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (i &lt;= j) &#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> (arr[i] &lt; pivot)</span><br><span class="line">            i++;</span><br><span class="line">        <span class="keyword">while</span> (arr[j] &gt; pivot)</span><br><span class="line">            j--;</span><br><span class="line"></span><br><span class="line">    &#125;<span class="comment">//end while</span></span><br><span class="line"></span><br><span class="line">&#125;<span class="comment">//end quicksort</span></span><br><span class="line"></span><br><span class="line">&#125;<span class="comment">//end quicksort</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<ul>
+<li>第一个 <code>while</code> 用于检测左侧的元素是否都小于 <em>pivot</em>, 如果是，则使 <em>i</em> ++。<br>这可以用来判断是否需要对数组左侧执行排序。</li>
+<li>第二个 <code>while</code> 用于检测右侧的元素是否都大于 <em>pivot</em>, 如果是，则使 <em>j</em> —。<br>这可以用来判断是否需要对数组右侧执行排序。</li>
+</ul>
+<hr>
+<ul>
+<li><h3 id="Part-5"><a href="#Part-5" class="headerlink" title="Part 5"></a><a href="#Part-5" title="Part 5"></a><em>Part 5</em></h3></li>
+</ul>
+<p>如果 <em>i &lt;= j</em> 则交换两个元素的值。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">quicksort</span><span class="params">(<span class="keyword">int</span> *arr, <span class="keyword">int</span> left, <span class="keyword">int</span> right)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = left;</span><br><span class="line">    <span class="keyword">int</span> j = right;</span><br><span class="line">    <span class="keyword">int</span> temp;</span><br><span class="line">    <span class="keyword">int</span> pivot = arr[(left + right) / <span class="number">2</span>];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (i &lt;= j) &#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> (arr[i] &lt; pivot)</span><br><span class="line">            i++;</span><br><span class="line">        <span class="keyword">while</span> (arr[j] &gt; pivot)</span><br><span class="line">            j--;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Begins the swap</span></span><br><span class="line">        <span class="keyword">if</span> (i &lt;= j) &#123;</span><br><span class="line">            temp = arr[i];</span><br><span class="line">            arr[i] = arr[j];</span><br><span class="line">            arr[j] = temp;</span><br><span class="line">            i++;</span><br><span class="line">            j--;</span><br><span class="line">        &#125; <span class="comment">//end if</span></span><br><span class="line"></span><br><span class="line">    &#125;<span class="comment">//end while</span></span><br><span class="line"></span><br><span class="line">&#125;<span class="comment">//end quicksort</span></span><br></pre></td></tr></table></figure>
+
+<p>这样交换会使数组升序排列，如果交换这里没有 <em>temp</em> 作为临时变量的话，其中一个元素的值就会丢失。为了防止丢失，需要以下的过程：</p>
+<ul>
+<li>将 <em>arr[ i ]</em> 的值复制给 <em>temp</em></li>
+<li>将 <em>arr[ j ]</em> 的值赋值给 <em>arr[ i ]</em></li>
+<li>将 <em>temp</em> 的值赋值给 <em>arr[ j ]</em></li>
+<li><em>i++</em></li>
+<li><em>j—</em></li>
+</ul>
+<hr>
+<ul>
+<li><h3 id="Part-6"><a href="#Part-6" class="headerlink" title="Part 6"></a><a href="#Part-6" title="Part 6"></a><em>Part 6</em></h3></li>
+</ul>
+<p>判断两边的数组是否已排好序</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">quicksort</span><span class="params">(<span class="keyword">int</span> *arr, <span class="keyword">int</span> left, <span class="keyword">int</span> right)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = left;</span><br><span class="line">    <span class="keyword">int</span> j = right;</span><br><span class="line">    <span class="keyword">int</span> temp;</span><br><span class="line">    <span class="keyword">int</span> pivot = arr[(left + right) / <span class="number">2</span>];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (i &lt;= j) &#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> (arr[i] &lt; pivot)</span><br><span class="line">            i++;</span><br><span class="line">        <span class="keyword">while</span> (arr[j] &gt; pivot)</span><br><span class="line">            j--;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Begins the swap</span></span><br><span class="line">        <span class="keyword">if</span> (i &lt;= j) &#123;</span><br><span class="line">            temp = arr[i];</span><br><span class="line">            arr[i] = arr[j];</span><br><span class="line">            arr[j] = temp;</span><br><span class="line">            i++;</span><br><span class="line">            j--;</span><br><span class="line">        &#125; <span class="comment">//end if</span></span><br><span class="line"></span><br><span class="line">    &#125;<span class="comment">//end while</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// Check if we need to sort the left side</span></span><br><span class="line">    <span class="keyword">if</span> (left &lt; j)</span><br><span class="line">        quicksort(arr, left, j);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Check if we need to sort the right side</span></span><br><span class="line">    <span class="keyword">if</span> (i &lt; right)</span><br><span class="line">        quicksort(arr, i, right);</span><br><span class="line"></span><br><span class="line">&#125;<span class="comment">//end quicksort</span></span><br></pre></td></tr></table></figure>
+
+<p>通过两个递归调用，对左侧数组排序，当排完左侧时，再排右侧数组。</p>
+<hr>
+<ul>
+<li><h3 id="Part-7"><a href="#Part-7" class="headerlink" title="Part 7"></a><a href="#Part-7" title="Part 7"></a><em>Part 7</em></h3></li>
+</ul>
+<p>测试函数</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">quicksort</span><span class="params">(<span class="keyword">int</span>* arr, <span class="keyword">int</span> left, <span class="keyword">int</span> right)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = left;</span><br><span class="line">    <span class="keyword">int</span> j = right;</span><br><span class="line">    <span class="keyword">int</span> temp;</span><br><span class="line">    <span class="keyword">int</span> pivot = arr[(left + right) / <span class="number">2</span>];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (i &lt;= j) &#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> (arr[i] &lt; pivot)</span><br><span class="line">            i++;</span><br><span class="line">        <span class="keyword">while</span> (arr[j] &gt; pivot)</span><br><span class="line">            j--;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Begins the swap</span></span><br><span class="line">        <span class="keyword">if</span> (i &lt;= j) &#123;</span><br><span class="line">            temp = arr[i];</span><br><span class="line">            arr[i] = arr[j];</span><br><span class="line">            arr[j] = temp;</span><br><span class="line">            i++;</span><br><span class="line">            j--;</span><br><span class="line">        &#125; <span class="comment">//end if</span></span><br><span class="line"></span><br><span class="line">    &#125; <span class="comment">//end while</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// Check if we need to sort the left side</span></span><br><span class="line">    <span class="keyword">if</span> (left &lt; j)</span><br><span class="line">        quicksort(arr, left, j);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Check if we need to sort the right side</span></span><br><span class="line">    <span class="keyword">if</span> (i &lt; right)</span><br><span class="line">        quicksort(arr, i, right);</span><br><span class="line"></span><br><span class="line">&#125; <span class="comment">//end quicksort</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">const</span> <span class="keyword">int</span> n = <span class="number">10</span>;</span><br><span class="line">    <span class="keyword">int</span> arr[n] = &#123; <span class="number">7</span>, <span class="number">1</span>, <span class="number">34</span>, <span class="number">16</span>, <span class="number">12</span>, <span class="number">44</span>, <span class="number">19</span>, <span class="number">99</span>, <span class="number">0</span>, <span class="number">4</span> &#125;;</span><br><span class="line">    quicksort(arr, <span class="number">0</span>, n - <span class="number">1</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; arr[i] &lt;&lt; <span class="string">' '</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>经过调试，运行结果为<br><code>0 1 4 7 12 16 19 34 44 99</code><br>与预期相同。快速排序大功告成。</p>
+<hr>
 
       
     </div>
@@ -451,7 +541,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://huangyanblog.com/2019/08/29/hello-world/" title="Hello World">https://huangyanblog.com/2019/08/29/hello-world/</a>
+    <a href="https://huangyanblog.com/2019/03/27/快速排序详解/" title="快速排序详解">https://huangyanblog.com/2019/03/27/快速排序详解/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -464,6 +554,14 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/C-C/" rel="tag"># C/C++</a>
+          
+            <a href="/tags/算法/" rel="tag"># 算法</a>
+          
+        </div>
+      
 
       
       
@@ -473,15 +571,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/27/ST算法详解/" rel="next" title="ST算法详解">
-                <i class="fa fa-chevron-left"></i> ST算法详解
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/03/27/快速幂详解/" rel="prev" title="快速幂详解">
+                快速幂详解 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -634,7 +732,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Part-1"><span class="nav-number">1.</span> <span class="nav-text">Part 1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Part-2"><span class="nav-number">2.</span> <span class="nav-text">Part 2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Part-3"><span class="nav-number">3.</span> <span class="nav-text">Part 3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Part-4"><span class="nav-number">4.</span> <span class="nav-text">Part 4</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Part-5"><span class="nav-number">5.</span> <span class="nav-text">Part 5</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Part-6"><span class="nav-number">6.</span> <span class="nav-text">Part 6</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Part-7"><span class="nav-number">7.</span> <span class="nav-text">Part 7</span></a></li></ol></div>
             
 
           </div>
@@ -1305,6 +1403,26 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 
